@@ -60,6 +60,8 @@ test("creates a new question when the form is submitted", async () => {
 test("deletes the question when the delete button is clicked", async () => {
   const { rerender } = render(<App />);
 
+  screen.debug();
+
   fireEvent.click(screen.queryByText(/View Questions/));
 
   await screen.findByText(/lorem testum 1/g);
